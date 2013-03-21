@@ -1,5 +1,5 @@
 *******************Spyder v6 - Darshan Pandit, Manas Pawar*******************
-
+Refer to explain.txt for the flow and implementation details for this code.
 
 *LIST OF FILES AND DESCRIPTION
 1. spydermain.py - The core module which initializes other modules.
