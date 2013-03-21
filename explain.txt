@@ -1,0 +1,28 @@
+*******************Spyder v6 - Darshan Pandit, Manas Pawar*******************
+
+
+*PROGRAM FLOW
+1. Accept user input: keywords and depth
+2. Get and process the search results from Google Search api (googleapiurl.api_url_calculator())
+3. Initiate the URL queue and execute the following until the URL queue is empty. (URLProvider.add_URL())
+	3.1 Fetch a URL. (URLProvider.get_URL())
+	3.2 Get and cache the robots.txt from the domain. (SiteHandler.is_Valid() and SiteHandler.add_TO_Cache())
+	3.3 Request the page returned by the URL. (URLFetcher.getURL())
+	3.4 Parse the page contents and extract valid links (AttributeExtraction.extract_Links())
+	3.5 Store the page data in a buffer and write the buffer to a file every 100 pages. (pagestoragehandler.write_log())
+	3.6 Store the execution log and for the particular URL. (infologger.write_summary())
+	3.7 Filter the URLs against the whitelists for MIME and protocol.
+	3.8 Update the URL queue. (URLProvider.add_URL())
+4. Write the statistics to a file.
+
+Please reffer to the diagram for a schematic working of Spyder (only inportant feartures shown)
+
+
+*SPECIAL FEATURES
+1. Caching of ‘robots.txt’ of 100 Domains. (Performance gain)
+2. Handling of page frames and iframes.
+3. Using Base tag to handle relative URLs.
+4. Exploiting rel tag for improved parsing.
+5. Buffers and compresses the response pages before writing to files. (Performance gain)
+6. Fragmant handling in URLs.
+	
