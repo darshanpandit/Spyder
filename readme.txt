@@ -26,8 +26,8 @@ Refer to explain.txt for the flow and implementation details for this code.
 
 *LIMITATIONS
 1. I/O error caused due to force termination of connection from the server side.
-2. The crawl delays are noe incorporated.
-3. In the statistics file, the toatal size refers to the total length of all the files crawled. We assume that they would be similar.
+2. The crawl delays are not incorporated.
+3. In the statistics file, the total size refers to the total length of all the files crawled. We assume that they would be similar.
 3. Server timeout.
-4. 
+
 Baseline: Handles 99% of urls
